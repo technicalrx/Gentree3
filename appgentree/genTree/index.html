@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html manifest="index.hyperesources/cache.manifest">
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+	<title>GenTree</title>
+ 
+	<style>
+		html {
+			height:100%;
+		}
+		body {
+			background-color:#FFFFFF;
+			margin:0;
+			height:100%;
+		}
+	</style>
+	<!-- copy these lines to your document head: -->
+
+	<meta name="viewport" content="user-scalable=yes, width=device-width" />
+	<style>
+    @font-face {
+        src:url('index.hyperesources/futuratot-bol-webfont.ttf') format('truetype')
+    }
+</style>
+	<style>
+@import url("//fast.fonts.net/t/1.css?apiType=ad&projectid=babe312a-f3c9-11e4-a0e7-005056a60fc6&fontids=zx7JNqkDrR&campaignid=AC497622-824A-4C08-B2C2-24BC6F991C3B-1792-0000311631679BAF");
+@font-face {
+    font-family: "Fords Folly W02 Regular";
+    src:
+        url("//apiadn.fonts.com/v2/fonts/subset?x=EM3PBpc%2bbbEILNdRKpN5%2bljtYA%2bbevyavMYc7n9WRH9mhLZ3FDwzs9B%2fjlA%2fVC3hxdNz2xvKWHcbS79nTMkO1OoGvzNt20kRASwdt9c0qr0JYqtQhBH4rTQTAKny3Y3lQp%2fZ9fAW1%2buMBkZFX%2fAUI%2bm5LJSkByDdJz5BkY9bj2ViQv0T7UuDBS4WtEsuLkzArudQlVMX0qUTIlktL9PIZhkjdTn5HlBEZD2Ebt4RCM9NhDAkOe5LiscSHv98NpFvyoH7lUg0lF%2fc0gobTaVeLHayhYDZYKTaTfqo9ElDXJUOmFg02K%2bMAVKDXyBB%2fzyrtWaDcnOb5GQ9afvMrNjBrnEDkU0KeRs33eFXdLZWUU9xTQT%2fzrCsKQKlwJjP5bwNsHiEiAWNBnrS5dik99Eilg%3d%3d");
+    src:
+        url("//apiadn.fonts.com/v2/fonts/subset?x=EM3PBpc%2bbbEILNdRKpN5%2bljtYA%2bbevyavMYc7n9WRH9mhLZ3FDwzs9B%2fjlA%2fVC3hxdNz2xvKWHcbS79nTMkO1OoGvzNt20kRASwdt9c0qr0JYqtQhBH4rTQTAKny3Y3lQp%2fZ9fAW1%2buMBkZFX%2fAUI%2bm5LJSkByDdJz5BkY9bj2ViQv0T7UuDBS4WtEsuLkzArudQlVMX0qUTIlktL9PIZhkjdTn5HlBEZD2Ebt4RCM9NhDAkOe5LiscSHv98NpFvyoH7lUg0lF%2fc0gobTaVeLHayhYDZYKTaTfqo9ElDXJUOmFg02K%2bMAVKDXyBB%2fzyrtWaDcnOb5GQ9afvMrNjBrnEDkU0KeRs33eFXdLZWUU9xTQT%2fzrCsKQKlwJjP5bwNsHiEiAWNBnrS5dik99Eilg%3d%3d#iefix")  format("eot"),
+        url("//apiadn.fonts.com/v2/fonts/subset?x=%2blHO3KVIcnzxy17bdp0V9O3CeMYxsSxnSoS6aW6sehZG9JlBmk%2f1zPRHTeyY9%2f5Algenfj4B0SIcMeKjdz3kFEdmYzHtfX0fBZ9%2fmyzg9uPd28hc5lHAE%2bmcI3IbTTm4VcL69hlJSD%2fkpgLuW3l7r6HAlQkMGoYSke4CCFIii%2bqg%2fXR%2f9Na21tfB5wXw%2flmuSBv%2b8NHT3%2btdKZwsw8coPAf%2bvNeqmkUoDaR%2fecDEHEaRAvisoKAYR4kHxI4tRKjNZ0oXbZ3iAe55kZhyK%2bLC5W3caGzQ5R%2blhzy8ryB%2foYo3m03K2yu4Ww0kr0ZwLTrq4dJe3UwgbaKV%2bIUzu3b94H9d0QMa2JHKlxsPxDbtt1k3rC64En%2bwbPym98f6zLut5y7X3ioSj1rENtw1ch6z9g%3d%3d")  format("woff2"),
+        url("//apiadn.fonts.com/v2/fonts/subset?x=cu4wmfRI9w3%2fiQYs73IHk7MedDYfPPStmJ%2b3KH6nYIF993SDx11nxgsZIf63RFaBrHqGNV2uvym7kefz0nyR7AhCBD1YFDkoNrgmp3EG4pVXYtKClAdV27gJc2jnygxJxpVYGkFEpVH2%2bc3gpgpPBAAdagJ3u%2bwbGZ7EN%2fcG9u0jf4EUUk9IHANbYG9gh0fu7DMhQ9QW%2fJJNKus%2bEYO%2b8en9DB6g3LODVFQvVYdaeSvla%2brSv2c9F%2bD0SiFGQ1PksZoJJLca1sdLgJHRBtFsEwtyK1SrgeUneibHpOkjQSb%2fM%2bcyXhaCWtlL54Aa9uNrO3hB7QqSDD64mKP9bm6sYyI0P8ZVDo8en%2bvp%2fYsGlr8wvlT9jrjMI5Sc7OXZ68Xi9QFNnCuhZUyQvl5ewIVMkg%3d%3d")  format("woff"),
+        url("//apiadn.fonts.com/v2/fonts/subset?x=meXPaq49%2frB%2f0T%2fDC8ftUiHdqNZ7f%2faIdKiOVrtyqZtPQZ9NhS9ujH9mxfij1oX7yWW%2b1aec8Uq2OETSRPxjmrdnUB%2fB1UqhKsYFntL4XRmclDAesNXGG2M8vT8m8WrYKViMJV5DwrYczAvfgSk%2fZ71PLxMKR1JPwhGJcLVMX6i6%2bSjv3aCFDUKxZJoxXPaNuwlk23sIa%2b9h0YB3pD5Jc6yPmVAd9%2bxvhAEsmLiTuE1tS%2fxOElazE%2bXxsLW0p0rtZKaNTQjUU0danGiOUdOanobWW4QRFseoKYCLpLDkU29IztSm319amQYrY3aZNk4sPIQyBECXZjRIFRxR90edXD8s1gexbnWieNR30EULKS3mySBOosko2YuAahb8i0k1kP6GhqX8w2SEL0fPcd3DkQ%3d%3d")  format("truetype");
+}
+
+</style>
+	<script type="text/javascript" src="index.hyperesources/jquery-2.1.3.js"></script>
+	<script type="text/javascript" src="index.hyperesources/ilso.js"></script>
+
+     <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+
+     <script type="text/javascript">
+     
+     
+     
+     	
+  function myCallback(hypeDocument, element, event) {
+    if (isScalePossible()){
+      window.myHypeContainerId = hypeDocument.documentId();
+      $('#' + window.myHypeContainerId).css({
+        '-moz-transform-origin': '0% 0%',
+        '-webkit-transform-origin': '0% 0%',
+        '-ms-transform-origin': '0% 0%',
+        '-o-transform-origin': '0% 0%',					
+        'transform-origin': '0% 0%',
+        margin: 0
+      });
+      scaleSite();
+      $(window).resize(scaleSite);
+    }
+    return true;
+  }
+  if("HYPE_eventListeners" in window === false) {
+    window.HYPE_eventListeners = Array();
+  }
+  window.HYPE_eventListeners.push({"type":"HypeDocumentLoad", "callback":myCallback});
+  function scaleSite()
+  {
+  	var hypeContainer = $('#' + window.myHypeContainerId);
+    var containerWidth = hypeContainer.width();
+    var containerHeight = hypeContainer.height();
+    var parentWidth = hypeContainer.parent().width();
+    var parentHeight = hypeContainer.parent().height();
+    var scaleWidth = parentWidth / containerWidth;
+    var scaleHeight = parentHeight / containerHeight;
+    var scale = Math.min(scaleWidth, scaleHeight);
+    var left = (containerWidth * scale < parentWidth) ? ((parentWidth - (containerWidth * scale)) / 2) + 'px' : '0px';
+    var top = (containerHeight * scale < parentHeight) ? ((parentHeight - (containerHeight * scale)) / 2) + 'px' : '0px' ;
+    hypeContainer.css({
+        "-moz-transform"    : "scale("+scale+")",
+        "-webkit-transform" : "scale("+scale+")",
+        "-ms-transform"     : "scale("+scale+")",
+        "-o-transform"      : "scale("+scale+")",
+        "transform"         : "scale("+scale+")",
+        "left" : left,
+        "top" : top
+    });
+  }
+  function isScalePossible() 
+  {
+    can = 'MozTransform' in document.body.style;
+    if(!can) can = 'webkitTransform' in document.body.style;
+    if(!can) can = 'msTransform' in document.body.style;
+    if(!can) can = 'OTransform' in document.body.style;
+    if(!can) can = 'transform' in document.body.style;
+    if(!can) can = 'Transform' in document.body.style;
+    return can;
+  }
+</script>
+	
+
+	<!-- end copy -->
+  </head>
+  <body>
+	<!-- copy these lines to your document: -->
+
+	<div id="index_hype_container" style="margin:auto;position:relative;width:1920px;height:1080px;overflow:hidden;" aria-live="polite">
+		<div align="center" style="margin-top: 20%;">
+      <img src="index.hyperesources/loading.gif" >
+      
+    </div>
+    <script type="text/javascript" charset="utf-8" src="index.hyperesources/index_hype_generated_script.js?52509"></script>
+	</div>
+
+	<!-- end copy -->
+	
+
+
+	<!-- text content for search engines: -->
+
+	<div style="display:none">
+
+		<div></div>
+		<div> 
+</div>
+		<div></div>
+		<div>Please check teacher Id and student Id</div>
+		<div>Teacher Id
+</div>
+		<div>Student Id</div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+
+	</div>
+
+	<!-- end text content: -->
+
+  </body>
+</html>
